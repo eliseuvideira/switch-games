@@ -1,0 +1,17 @@
+version: '3'
+
+services:
+  api:
+    build: .
+    environment:
+      - NODE_ENV=production
+      - PORT=$PORT
+      - API_NAME=$API_NAME
+      - DB_HOST=$DB_HOST
+      - DB_PORT=$DB_PORT
+      - DB_USER=$DB_USER
+      - DB_PASSWORD=$DB_PASSWORD
+      - DB_DATABASE=$DB_DATABASE
+    ports:
+      - $PORT:$PORT
+    restart: always
