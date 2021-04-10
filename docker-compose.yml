@@ -7,11 +7,8 @@ services:
       - NODE_ENV=production
       - PORT=$PORT
       - API_NAME=$API_NAME
-      - DB_HOST=$DB_HOST
-      - DB_PORT=$DB_PORT
-      - DB_USER=$DB_USER
-      - DB_PASSWORD=$DB_PASSWORD
-      - DB_DATABASE=$DB_DATABASE
+      - HEADLESS=1
+      - USER_AGENT=$USER_AGENT
     ports:
       - $PORT:$PORT
     restart: always
